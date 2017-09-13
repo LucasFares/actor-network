@@ -31,7 +31,7 @@ for i in range(len(deg)):
     distance.append( (deg[i][0], math.sqrt((deg[i][1]/degMax)**2+(close[i][1]/closeMax)**2+(bet[i][1]/betMax)**2)) )
 
 #The following prints out pretty results
-nx.draw_networkx(graph)
+nx.draw_networkx(graph, with_labels=False, edge_color='gray', node_color='black',node_size=100)
 plot.show()
 print("Degree: ", sorted(deg, key=operator.itemgetter(1), reverse=True)[:10])
 print("Closeness: ", sorted(close, key=operator.itemgetter(1), reverse=True)[:10])
